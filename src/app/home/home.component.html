@@ -1,0 +1,5 @@
+<div class="collection-list">
+  <jb-collection *ngFor="let collection of collections"
+                 [collection]="collection"
+                  (onDelete)="deleteCollection($event)"></jb-collection>
+</div>

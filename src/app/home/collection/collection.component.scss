@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  margin: 20px;
+  flex-grow: 1;
+  &:hover {
+    .close {
+      display: block;
+    }
+  }
+}
+
+.actions {
+  text-align: right;
+}
+
+.close {
+  display: none;
+  cursor: pointer;
+}
+
+.form-control {
+  width: 300px;
+}

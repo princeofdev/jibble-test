@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-body">
+    <button type="button" class="close" (click)="deleteCollection()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <p>
+      <strong>Post:</strong>
+      <span [hidden]="editMode">{{collection.post.title}} <button class="btn btn-primary btn-sm" (click)="enableEditMode()">Edit</button></span>
+      <span [hidden]="!editMode">
+        <div class="btn-group" role="group">
+          <input type="text" name="title" class="form-control" [(ngModel)]="collection.post.title" />
+          <button class="btn btn-success btn-sm" (click)="updatePostTitle()" [disabled]="!collection.post.title">Save</button>
+        </div>
+    </span>
+    </p>
+    <p><strong>Album:</strong> {{collection.album.title}}</p>
+    <p><strong>User:</strong> {{collection.user.name}}</p>
+  </div>
+</div>
